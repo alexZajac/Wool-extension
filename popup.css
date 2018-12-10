@@ -1,0 +1,255 @@
+body, html{
+    width:450px;
+    height: 500px;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    font-weight: bold;
+    src: url(/montserrat/Montserrat-Bold.otf),
+}
+@font-face{
+    font-family: "Montserrat";
+    font-weight: 300;
+    src: url(/montserrat/Montserrat-Medium.otf)
+}
+
+@font-face{
+    font-family: "Montserrat";
+    font-weight: 100;
+    src: url(/montserrat/Montserrat-Light.otf),
+}
+
+#SentencesPicker{
+    display: none;
+}
+
+#btnContainer, .sentences-input, #Translated, #textSum{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    text-align: center;
+}
+h2, #textToTranslate, #translateTitle, #summary{
+    font-family: 'Montserrat';
+    font-weight:bold;
+    text-align: center;
+}
+
+h4, #docTitle{
+    font-family: 'Montserrat';
+    font-weight: 100;
+    color: rgb(77, 77, 77);
+}
+
+option, p{
+    font-family: 'Montserrat';
+    font-weight: 100;
+}
+
+#translation, .summary{
+    border: 2px solid #000000c0;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 95%;
+    background-color: white;
+}
+
+select{
+    border: 2px solid grey;
+    border-radius: 10px;
+    height: 30px;
+}
+
+button, #sentences-input{
+    border: 3px solid #1ECD97;
+    width:140px;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.txtbtn, #sentences-input{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #1ECD97;
+}
+
+.clicked{
+    font-size: 30px;
+}
+
+button:hover,  #sentences-input:hover{
+    color:#1ECD97;
+    background: #000;
+    letter-spacing: 1px;
+}
+
+button:active, #sentences-input:active{
+    letter-spacing: 4px;
+}
+
+button:focus, #sentences-input:focus{
+    color:white;
+    background: #1ECD97;
+    outline: 0;
+}
+
+.fr{
+    background: linear-gradient(to right, #0c1cf77e 0%,#ffffff7e 50%,#ff00007e 100%);
+}
+
+.es{
+    background: linear-gradient(to bottom, #ff00007e 10%,rgba(255, 255, 0, 0.479) 50%,#ff00007e 90%);
+}
+
+.en{
+    background: linear-gradient(to top, #ff00007e 0%,#ffffff7e 10%,#ff00007e 20%,#ffffff7e 30%, #ff00007e 40%,#ffffff7e 50%, #0000ff7e 75%, #0000ff7e 85%);
+}
+
+.pl{
+    background: linear-gradient(to top, #ff00007e ,#ffffff7e);
+}
+
+.de{
+    background: linear-gradient(to bottom, #0000007e ,#ff00007e ,rgba(255, 255, 0, 0.479));
+}
+
+.pt{
+    background: linear-gradient(to right, #0066007e, #ff00007e 40%);
+}
+
+.zh{
+    background: linear-gradient(to right, #ff00007e ,rgba(255, 255, 0, 0.479) 15% ,#ff00007e 25% );
+}
+
+.ru{
+    background: linear-gradient(to bottom, #ffffff7e ,#0000ff7e ,#ff00007e);
+}
+
+.ar{
+    background: linear-gradient(to bottom, #0066007e ,#ffffff7e 20% ,#0066007e 45% );
+}
+
+.it{
+    background: linear-gradient(to right, #0066007e ,#ffffff7e ,#ff00007e );
+}
+
+.loader{
+    position: relative;
+	width: 50px;
+	margin: 25px;
+}
+    
+.jelly{
+    animation: jumping 1s infinite;
+}
+		
+.body{
+    width: 50px;
+    height: 100px;
+    border-radius: 25px;
+    background-color: #1ECD97;
+    animation: body 1s infinite;
+}
+.mouth{
+    position: absolute;
+    top: 42px;
+    left: 13px;
+    width: 20px;
+    height: 10px;
+    border: 3px solid #2A333B;
+    border-radius: 0 0 20px 20px;
+    background-color: #2A333B;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mouth:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 20px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FF4081;
+}
+
+.eye{
+    position: absolute;
+    top: 22px;
+    width: 5px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2A333B;
+    animation: eye 6s infinite;
+}
+		
+.eye:nth-child(even){
+        left: 15px;
+    }
+		
+.eye:nth-child(odd){
+        right: 15px;
+}
+		
+.shadow{
+    position: absolute;
+    bottom: -5px;
+    z-index: -1;
+    width: 50px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: alpha(#2A333B, 20%);
+    animation: shadow 1s infinite;
+}
+		
+		
+
+@keyframes jumping {
+    0%
+    {transform: translateY(-40px);}
+   70%
+    {transform: scale(1.02, .9) translateY(10px);}
+    100%
+    {transform: translateY(-40px);}
+}
+	
+		
+@keyframes body{
+    0%
+    {border-radius: 50px;}
+    70%
+    {border-radius: 50px 50px 40px 40px;}
+    100%
+    {border-radius: 50px;}
+}
+	
+	
+@keyframes eye{
+    0%
+		{transform: scale(1);}
+	2%
+		{transform: scale(2, 0.2);}
+	4%
+		{transform: scale(1);}
+	6%
+		{transform: scale(2, 0.2);}
+	8%
+		{transform: scale(1);}
+}
+	
+		
+@keyframes shadow{
+    0%
+    {transform: scaleX(0.9);}
+70%
+    {transform: scaleX(1);}
+100%
+    {transform: scaleX(0.9);}
+}
+	
+

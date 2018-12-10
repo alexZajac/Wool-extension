@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="popup.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <title>Popup</title>
+</head>
+<body>
+    <h2>Welcome to the Wool extension !</h2>
+    <div id='translation'><h3 id="translateTitle"  style="display:none;">Translation : </h3>
+        <div id="containerTranslation" style="text-align: center;">
+            <h4></h4>
+                <div id="source">
+                   <span id="textToTranslate" style=" text-align: center;">Translate text to : </span>
+                   <div id="languageSelect"><br>
+                       <select id="selection">
+                           <option id ="fr" value="fr">French</option>
+                           <option id ="es" value="es">Spanish</option>
+                           <option id ="de" value="de">German</option>
+                           <option id ="pt" value="pt">Portuguese</option>
+                           <option id ="pl" value="pl">Polish</option>
+                           <option id ="en" value="en">English</option>
+                           <option id ="zh" value="zh">Chinese</option>
+                           <option id ="ru" value="ru">Russian</option>
+                           <option id ="ar" value="ar">Arabic</option>
+                           <option id ="it" value="it">Italian</option>
+                       </select>
+                   </div><br>
+                </div>
+                <p id="Translated"></p>
+        </div>    
+    </div><br>
+     <div class='summary'>
+        <div><h3 id="summary">Summary : </h3></div>
+        <div class="btnContainer" style="text-align: center;">
+            <button id="GetSummaryTxt" class="txtbtn" >From text</button><br><br>
+            <button id="GetSummaryUrl" class="txtbtn">From URL</button><br><br>
+            <button id="GetSummaryDoc" class="txtbtn">From doc</button><br>
+            <div id="docTitle"></div><br>
+            <input type ="file" id="file-input" accept=".doc, .docx" style="display:none;"required>
+        </div>          
+            <div id="SentencesPicker" style="display: none; text-align:center;">
+                <label for="nbrSentences" class="sentences-input">Choose the number of sentences of your summary :</label><br>
+                <input type="text" class="sentences-input" placeholder="Between 1 and 999." pattern="^[0-9]{1,3}$" required><br><br>
+                <input type="submit" id="sentences-input" class ="txtbtn" value="Summarize !"></input>
+            </div> 
+        <div id="textSum"></div>      
+     </div>
+     <div id="containerAnimation" style="align-items: center; ">
+            <div class="loader" style="display:none; margin : 0 auto; bottom:75px; position:fixed; right:200px;">
+                    <div class="jelly">
+                      <div class="body"></div>
+                      <div class="eye"></div>
+                      <div class="eye"></div>
+                      <div class="mouth"></div>
+                    </div>
+                    <div class="shadow"></div>
+            </div>
+    </div>
+</body>
+</html>
